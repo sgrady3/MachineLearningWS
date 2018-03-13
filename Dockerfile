@@ -1,5 +1,5 @@
 FROM jupyter/tensorflow-notebook
 
 
-VOLUME /Data
-VOLUME /Workspace
+VOLUME /home/jovyan/Data
+VOLUME /home/jovyan/Workspace
