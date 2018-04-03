@@ -4,7 +4,7 @@ from matplotlib import pyplot as plt
 import matplotlib.cm as cm
 
 
-def s_plot(Data,silhouette_scores,clusters,show_plot=True,save_dir=False):
+def s_plot(Data,silhouette_scores,clusters,show_plot=True,save_dir=False,dpi=150):
 #plots silhouettes calculated using scikit learns sample silhouette metric
 #Code taken from sci kit learn 
 #http://scikit-learn.org/stable/auto_examples/cluster/plot_kmeans_silhouette_analysis.html#sphx-glr-auto-examples-cluster-plot-kmeans-silhouette-analysis-py
@@ -61,6 +61,6 @@ def s_plot(Data,silhouette_scores,clusters,show_plot=True,save_dir=False):
         plt.ion()
         plt.show()
     if save_dir!=False:
-        fig.savefig(save_dir+".png",dpi=600)
+        fig.savefig(save_dir+".png",dpi=dpi)
     plt.ion()
     return;
