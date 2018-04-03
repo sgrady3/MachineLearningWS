@@ -6,8 +6,6 @@ USER $NB_USER
 RUN conda config --add channels conda-forge
 RUN conda install --quiet --yes \
     h5py \
-    pandas \
-    seaborn \
     graphviz &&\
     conda clean -tipsy && \
 fix-permissions $CONDA_DIR
@@ -15,3 +13,5 @@ fix-permissions $CONDA_DIR
 COPY ./Workspace Workspace
 
 VOLUME /home/jovyan/Workspace
+
+USER $NB_USER
