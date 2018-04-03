@@ -13,3 +13,5 @@ fix-permissions $CONDA_DIR
 COPY ./Workspace Workspace
 
 VOLUME /home/jovyan/Workspace
+
+USER $NB_USER
