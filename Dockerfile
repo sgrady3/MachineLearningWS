@@ -8,7 +8,7 @@ RUN conda install --quiet --yes \
     conda clean -tipsy && \
 fix-permissions $CONDA_DIR
 
-RUN mkdir Workspace
+RUN mkdir Workspace && mkdir Results && mkdir Results/Hierarchical_Clustering && mkdir Results/Decision_Tree && mkdir Results/Neural_Networks
 COPY ./Workspace Workspace
 
 USER $NB_USER
