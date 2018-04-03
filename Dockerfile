@@ -12,5 +12,6 @@ RUN conda install --quiet --yes \
     conda clean -tipsy && \
 fix-permissions $CONDA_DIR
 
-VOLUME /home/jovyan/Data
+COPY ./Workspace Workspace
+
 VOLUME /home/jovyan/Workspace
