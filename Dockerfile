@@ -10,11 +10,8 @@ RUN conda install --quiet --yes \
     conda clean -tipsy && \
 fix-permissions $CONDA_DIR
 
+RUN mkdir Workspace
 COPY ./Workspace Workspace
-
-VOLUME /home/jovyan/Workspace
-
-
 
 USER $NB_USER
 
